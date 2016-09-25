@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>PiPets</title>
+    <script src="/vendors/angular.min.js" charset="utf-8"></script>
+    <script src="/vendors/angular-route.min.js" charset="utf-8"></script>
+    <script src="/scripts/client.js" charset="utf-8"></script>
+    <script src="/scripts/controllers/homeController.js" charset="utf-8"></script>
+    <script src="/scripts/controllers/viewController.js" charset="utf-8"></script>
+    <script src="/scripts/controllers/addController.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#view">View Pets</a></li>
+      <li><a href="#add">Add a Pet</a></li>
+    </ul>
+    <main ng-view></main>
+  </body>
+</html>

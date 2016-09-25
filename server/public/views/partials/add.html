@@ -1,3 +1,14 @@
-<p>
-  add
-</p>
+<div>
+  <input type="text" ng-model="petName" placeholder="Pet name" value="">
+  <input type="text" ng-model="petType" placeholder="Pet species" value="">
+  <input type="number" ng-model="petAge" placeholder="Pet age" value="">
+  <input type="text" ng-model="petImage" placeholder="image url" value="">
+  <button type="button" ng-click="addPet()">Add pet</button>
+</div>
+
+<!-- var newPet = new Pet({
+  name: req.body.name,
+  animal: req.body.animal,
+  age: req.body.age,
+  image: req.body.image
+}); -->

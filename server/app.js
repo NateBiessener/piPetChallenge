@@ -14,19 +14,14 @@ mongoose.connect('mongodb://localhost:27017/piPets');
 var petRouter = require('./routers/petRouter');
 app.use('/pets', petRouter);
 
+//set port and listen
 app.set('port', (process.env.PORT || 3546));
 
-app.listen(app.get('port'), function(){
+app.listen(app.get('port'), () => {
   console.log('server up on:', app.get('port'));
 });
 
-
-// var server = app.listen('3546', function() {
-//   var port = server.address().port;
-//   console.log('Server up on port', port);
-// });
-
-app.get('/*', function(req, res){
+app.get('/*', (req, res) => {
   console.log('request params:',req.params);
   var file = req.params[0] || "/views/index.html";
   res.sendFile(path.join(__dirname, "/public/", file));

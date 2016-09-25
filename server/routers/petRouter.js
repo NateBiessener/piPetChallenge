@@ -46,7 +46,7 @@ router.post('/pet', (req,res) => {
 
 //delete route to clear db during testing
 router.delete('/pet', (req,res) => {
-  Pet.remove({}, (err)=>{
+  Pet.remove({}, (err) => {
     if(err){
       console.log(err);
       res.sendStatus(500);

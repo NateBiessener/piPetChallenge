@@ -1,3 +1,4 @@
+<button ng-bind="alphaFilter" ng-click="filterPets()"></button>
 <div ng-repeat="pet in pets">
   {{pet.name}} - {{pet.age}} year old {{pet.animal}} <button ng-click="removePet(pet._id)">Release</button><br><img src="{{pet.image}}"/>
 </div>

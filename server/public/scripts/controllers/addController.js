@@ -23,7 +23,7 @@ myApp.controller('addController', ['$scope', '$http', function($scope, $http){
       });
     }//end if
     else {
-      alert('Please enter both the pet\'s name, species and age')
+      alert('Please enter the pet\'s name, species and age')
     }
     console.log(newPet);
   };

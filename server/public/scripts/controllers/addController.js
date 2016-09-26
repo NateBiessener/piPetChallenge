@@ -16,6 +16,10 @@ myApp.controller('addController', ['$scope', '$http', function($scope, $http){
         data: newPet
       }).then(function(results){
         console.log(results.data);
+        $scope.petName = '';
+        $scope.petType = '';
+        $scope.petAge = '';
+        $scope.petImage = '';
       });
     }//end if
     else {

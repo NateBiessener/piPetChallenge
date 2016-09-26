@@ -2,6 +2,8 @@ console.log('client script sourced');
 
 var myApp = angular.module('myApp', ['ngRoute']);
 
+// var dummyFunc = function(){console.log('in dummyFunc');} <---- used to test function exposure to controller files
+
 myApp.config(['$routeProvider', function($routeProvider){
   $routeProvider.when('/home', {
     templateUrl: '/views/partials/home.html',

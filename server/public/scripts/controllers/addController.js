@@ -9,7 +9,7 @@ myApp.controller('addController', ['$scope', '$http', function($scope, $http){
       age: $scope.petAge,
       image: $scope.petImage
     };
-    if (newPet.name && newPet.animal) {
+    if (newPet.name && newPet.animal && newPet.age) {
       $http({
         method: 'POST',
         url: 'pets/pet',
@@ -19,7 +19,7 @@ myApp.controller('addController', ['$scope', '$http', function($scope, $http){
       });
     }//end if
     else {
-      alert('Please enter both the pet\'s name and species')
+      alert('Please enter both the pet\'s name, species and age')
     }
     console.log(newPet);
   };

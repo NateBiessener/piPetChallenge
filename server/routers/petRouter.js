@@ -46,15 +46,17 @@ router.post('/pet', (req,res) => {
 
 //delete route to clear db during testing
 router.delete('/pet', (req,res) => {
-  Pet.remove({}, (err) => {
+  console.log('in pet delete with', req.body);
+  Pet.findByIdAndRemove( req.query.id, (err, result) => {
     if(err){
       console.log(err);
       res.sendStatus(500);
     }
     else {
-      res.sendStatus(200);
+      res.send(result);
     }
   })
 })
+
 
 module.exports = router;
